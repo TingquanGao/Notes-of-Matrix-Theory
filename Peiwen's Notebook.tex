@@ -1,0 +1,60 @@
+\documentclass{ctexart}
+
+% 调整页面布局
+\usepackage{geometry}
+\geometry{a4paper, centering, scale=0.8}
+
+% 定义圈1、圈2
+\usepackage{tikz}
+\newcommand*{\circled}[1]{\lower.7ex\hbox{\tikz\draw (0pt, 0pt)%
+    circle (.5em) node {\makebox[1em][c]{\small #1}};}}
+
+\usepackage{amsmath}
+% \usepackage{amsthm}
+\usepackage{ntheorem}
+
+% because therefore
+\usepackage{amssymb}
+
+
+\title{\heiti 培文笔记}
+\author{\kaishu 陈培文}
+\date{\today}
+
+% 数学专有定义
+\newtheorem*{example}{\hspace{2em}例} % [section]
+\newtheorem{algorithm}{\hspace{2em}算法}[section]
+\newtheorem{definition}{\hspace{2em}定义}[section]
+\newtheorem{axiom}{\hspace{2em}公理}[section]
+\newtheorem{theorem}{\hspace{2em}定理}[section]
+\newtheorem{lemma}{\hspace{2em}引理}[section]
+\newtheorem{proposition}{\hspace{2em}命题}[section]
+\newtheorem{corollary}{\hspace{2em}推论} % [section]
+\newtheorem{remark}{\hspace{2em}注解}[section]
+\newtheorem{property}{\hspace{2em}性质}[section]
+\newtheorem{condition}{\hspace{2em}条件}[section]
+\newtheorem{conclusion}{\hspace{2em}结论}[section]
+\newtheorem{assumption}{\hspace{2em}假设}[section]
+\newtheorem*{proof}{\hspace{2em}证明} % [section]
+\newtheorem*{solutiontitle}{\hspace{2em}解答}
+
+\begin{document}
+    \maketitle
+    \thispagestyle{empty}
+    \newpage
+    \tableofcontents    %生成目录
+    \thispagestyle{empty}   %目录页不显示页码
+    \newpage
+    \setcounter{page}{1}    %从下面开始编页码
+    
+    % 页码使用罗马数字
+    % \pagenumbering{Roman}
+    
+    % 第一章
+    \input{contents/section1.tex}
+
+    % 第二章
+    % \input{contents/section2.tex}
+
+\end{document}
+
